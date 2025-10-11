@@ -1,0 +1,24 @@
+{
+	"contenidoStr": "{\r\n  \"name\": \"lector-archivos-node.js\",\r\n  \"version\": \"1.0.0\",\r\n  \"description\": \"TP2 - Manejo de archivos en Node.js\",\r\n  \"main\": \"ms.js\",\r\n  \"scripts\": {\r\n    \"sincrono\": \"node ms.js\",\r\n    \"callback\": \"node mac.js\",\r\n    \"thencatch\": \"node maptc.js\",\r\n    \"asyncawait\": \"node mapaa.js\"\r\n  },\r\n  \"keywords\": [\r\n    \"node\",\r\n    \"fs\",\r\n    \"async\",\r\n    \"sync\"\r\n  ],\r\n  \"author\": \"Martin Salvo\",\r\n  \"license\": \"ISC\"\r\n}",
+	"contenidoObj": {
+		"name": "lector-archivos-node.js",
+		"version": "1.0.0",
+		"description": "TP2 - Manejo de archivos en Node.js",
+		"main": "ms.js",
+		"scripts": {
+			"sincrono": "node ms.js",
+			"callback": "node mac.js",
+			"thencatch": "node maptc.js",
+			"asyncawait": "node mapaa.js"
+		},
+		"keywords": [
+			"node",
+			"fs",
+			"async",
+			"sync"
+		],
+		"author": "Martin Salvo",
+		"license": "ISC"
+	},
+	"size": 419
+}

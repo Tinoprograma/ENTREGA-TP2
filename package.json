@@ -1,0 +1,20 @@
+{
+  "name": "lector-archivos-node.js",
+  "version": "1.0.0",
+  "description": "TP2 - Manejo de archivos en Node.js",
+  "main": "ms.js",
+  "scripts": {
+    "sincrono": "node ms.js",
+    "callback": "node mac.js",
+    "thencatch": "node maptc.js",
+    "asyncawait": "node mapaa.js"
+  },
+  "keywords": [
+    "node",
+    "fs",
+    "async",
+    "sync"
+  ],
+  "author": "Martin Salvo",
+  "license": "ISC"
+}
