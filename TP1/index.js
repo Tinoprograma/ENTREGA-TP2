@@ -3,9 +3,9 @@
 const fs = require('fs');
 const path = require('path');
 
-// ====================================================================
-// FUNCIÓN 1: leerArchivoComoString
-// ====================================================================
+
+// leerArchivoComoString
+
 
 /**
  * Recibe la ruta del archivo que se quiere leer, y devuelve un único string
@@ -25,9 +25,9 @@ function leerArchivoComoString(ruta) {
   }
 }
 
-// ====================================================================
-// FUNCIÓN 2: escribirTextoEnArchivo
-// ====================================================================
+
+// escribirTextoEnArchivo
+
 
 /**
  * Graba un texto en un archivo. Crea el archivo si no existe solo si el flag es true.
@@ -55,9 +55,9 @@ function escribirTextoEnArchivo(ruta, texto, flag) {
   }
 }
 
-// ====================================================================
+
 // FUNCIÓN 3: transformarStringEnArrayDeNumeros
-// ====================================================================
+
 
 /**
  * Transforma un string en un array de números, usando un separador.
@@ -88,9 +88,9 @@ function transformarStringEnArrayDeNumeros(texto, separador) {
   return resultado;
 }
 
-// ====================================================================
-// FUNCIÓN 4: transformarArrayDeNumerosAUnSoloString
-// ====================================================================
+
+// transformarArrayDeNumerosAUnSoloString
+
 
 /**
  * Une todos los elementos de un array de números en un único string,
@@ -105,9 +105,9 @@ function transformarArrayDeNumerosAUnSoloString(array, separador) {
   return array.map(String).join(separador);
 }
 
-// ====================================================================
-// FUNCIÓN 5: combinarDosArrays
-// ====================================================================
+
+// combinarDosArrays
+
 
 /**
  * Combina dos arrays numéricos ordenados y sin repetidos,
@@ -150,9 +150,9 @@ function combinarDosArrays(array1, array2) {
   return resultado;
 }
 
-// ====================================================================
-// FUNCIÓN 6: combinarNArrays
-// ====================================================================
+
+// combinarNArrays
+
 
 /**
  * Combina un array de N arrays numéricos ordenados y sin repetidos.
@@ -171,9 +171,9 @@ function combinarNArrays(arrays) {
 }
 
 
-// ====================================================================
-// PRUEBAS Y CÓDIGO DE EJECUCIÓN (npm test)
-// ====================================================================
+
+// npm test
+
 
 function ejecutarPruebas() {
   console.log('===================================================');
@@ -188,9 +188,9 @@ function ejecutarPruebas() {
   let textoLeido;
   let arrayNumeros;
 
-  // ----------------------------------------------------
+
   // PRUEBA 1: leerArchivoComoString
-  // ----------------------------------------------------
+
   console.log('--- 1. Pruebas de leerArchivoComoString ---');
   try {
     textoLeido = leerArchivoComoString(RUTA_LECTURA);
@@ -202,9 +202,9 @@ function ejecutarPruebas() {
   }
 
 
-  // ----------------------------------------------------
+
   // PRUEBA 2: transformarStringEnArrayDeNumeros
-  // ----------------------------------------------------
+
   console.log('\n--- 2. Pruebas de transformarStringEnArrayDeNumeros ---');
   const textoEjemplo = '123 | 456 | 789 | 1bc | 10 |';
   const separadorEjemplo = ' | ';
@@ -216,9 +216,9 @@ function ejecutarPruebas() {
   console.log('----------------------------------------------------');
 
 
-  // ----------------------------------------------------
+
   // PRUEBA 3: escribirTextoEnArchivo (Flag: true)
-  // ----------------------------------------------------
+
   console.log('\n--- 3. Pruebas de escribirTextoEnArchivo (Flag: true) ---');
   const textoA_Escribir = transformarArrayDeNumerosAUnSoloString(arrayNumeros, ',');
   console.log(`Escribiendo: '${textoA_Escribir}' en ${path.basename(RUTA_ESCRITURA)} (crear si no existe)...`);
@@ -233,9 +233,9 @@ function ejecutarPruebas() {
   console.log('----------------------------------------------------');
 
 
-  // ----------------------------------------------------
+
   // PRUEBA 4: escribirTextoEnArchivo (Flag: false, Archivo Inexistente)
-  // ----------------------------------------------------
+
   console.log('\n--- 4. Pruebas de escribirTextoEnArchivo (Flag: false, Inexistente) ---');
   try {
     console.log(`Intentando escribir en ${path.basename(RUTA_INEXISTENTE)} (no crear si no existe)...`);
@@ -251,9 +251,9 @@ function ejecutarPruebas() {
   console.log('----------------------------------------------------');
 
 
-  // ----------------------------------------------------
+
   // PRUEBA 5: transformarArrayDeNumerosAUnSoloString
-  // ----------------------------------------------------
+
   console.log('\n--- 5. Pruebas de transformarArrayDeNumerosAUnSoloString ---');
   const arrayEjemplo = [123, 456, 789, 10];
   const separadorString = ',';
@@ -265,9 +265,9 @@ function ejecutarPruebas() {
   console.log('----------------------------------------------------');
 
 
-  // ----------------------------------------------------
+
   // PRUEBA 6: combinarDosArrays
-  // ----------------------------------------------------
+
   console.log('\n--- 6. Pruebas de combinarDosArrays ---');
   const arrayA = [1, 5, 10, 10]; // Se prueba con repetido en el mismo array para comprobar la eliminación
   const arrayB = [2, 3, 8, 11, 11]; // Se prueba con repetido en el mismo array
@@ -279,9 +279,9 @@ function ejecutarPruebas() {
   console.log('----------------------------------------------------');
 
 
-  // ----------------------------------------------------
+
   // PRUEBA 7: combinarNArrays
-  // ----------------------------------------------------
+
   console.log('\n--- 7. Pruebas de combinarNArrays ---');
   const arraysN = [
     [1, 10, 10], // Con repetido para asegurar el filtrado
@@ -312,5 +312,4 @@ function ejecutarPruebas() {
   console.log('===================================================');
 }
 
-// Ejecutar todas las pruebas al iniciar el script (npm test)
 ejecutarPruebas();
