@@ -1,0 +1,16 @@
+{
+  "name": "tp1",
+  "version": "1.0.0",
+  "description": "Entrega TP1 - TP2",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "keywords": [
+    "nodejs",
+    "archivos",
+    "arrays"
+  ],
+  "author": "Martin Salvo",
+  "license": "ISC"
+}
